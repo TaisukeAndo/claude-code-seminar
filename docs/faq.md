@@ -83,9 +83,8 @@ Claude Pro プランへの加入が必要です。[https://claude.ai/](https://c
 
 ```bash
 claude logout
+claude login
 ```
-
-その後、再度 `claude` を実行してログインしてください。
 
 ---
 
