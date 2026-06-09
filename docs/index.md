@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: "Claude Code"
-  text: "ワンデイセミナー"
+  name: "ClaudeCode"
+  text: "1Day Seminar"
   tagline: セミナー当日までに、7ステップで環境を準備しましょう。所要時間は約 30〜45 分です。
   image:
-    src: /claude-code-seminar/hero-image.png
-    alt: Claude Code
+    src: /hero-image.png
+    alt: ClaudeCode 1Day Seminar
   actions:
     - theme: brand
       text: セットアップを始める →

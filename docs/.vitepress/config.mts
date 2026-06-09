@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Claude Code ワンデイセミナー',
-  description: 'セミナー前の事前セットアップガイド',
+  title: 'ClaudeCode 1Day Seminar',
+  description: 'ClaudeCode 1Day Seminar 事前セットアップガイド',
   lang: 'ja-JP',
   base: '/claude-code-seminar/',
 
@@ -11,7 +11,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    siteTitle: 'Claude Code セミナー',
+    siteTitle: 'ClaudeCode 1Day Seminar',
 
     nav: [
       { text: 'ホーム', link: '/' },
@@ -47,8 +47,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Claude Code ワンデイセミナー',
-      copyright: `© ${new Date().getFullYear()} TaisukeAndo`,
+      message: 'ClaudeCode 1Day Seminar',
+      copyright: '© 2026 bitcraft',
     },
 
     lastUpdated: {
