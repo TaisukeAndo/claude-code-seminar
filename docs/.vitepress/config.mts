@@ -16,6 +16,7 @@ export default defineConfig({
     nav: [
       { text: 'ホーム', link: '/' },
       { text: 'セットアップ', link: '/setup/' },
+      { text: 'セミナー資料', link: '/seminar/' },
       { text: 'よくある質問', link: '/faq' },
     ],
 
@@ -30,6 +31,14 @@ export default defineConfig({
           { text: '③ Claude Code CLI インストール', link: '/setup/03-claude-code-install' },
           { text: '④ API キーの取得・設定', link: '/setup/04-api-key' },
           { text: '⑤ 動作確認', link: '/setup/05-verify' },
+        ],
+      },
+      {
+        text: 'セミナー当日資料',
+        collapsed: false,
+        items: [
+          { text: 'プログラム', link: '/seminar/' },
+          { text: 'オープニング・Claude Code とは', link: '/seminar/01-intro' },
         ],
       },
       {
