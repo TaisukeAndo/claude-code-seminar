@@ -1,4 +1,4 @@
-# ② Node.js インストール
+# 2. Node.js インストール
 
 Claude Code CLI の実行には **Node.js v18 以上** が必要です。
 
@@ -11,7 +11,7 @@ node --version
 ```
 
 `v18.x.x` 以上が表示されればインストール済みです。  
-→ [③ Claude Code CLI インストール](/setup/03-claude-code-install) に進んでください。
+→ [3. テキストエディタのインストール](/setup/03-editor) に進んでください。
 
 エラーが出た場合や古いバージョンの場合は以下の手順でインストールします。
 
@@ -56,4 +56,4 @@ npm --version    # 10.x.x などが表示されれば OK
 
 ## 次のステップ
 
-Node.js のインストールが完了したら [③ Claude Code CLI インストール](/setup/03-claude-code-install) に進んでください。
+Node.js のインストールが完了したら [3. テキストエディタのインストール](/setup/03-editor) に進んでください。

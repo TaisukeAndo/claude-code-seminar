@@ -1,4 +1,4 @@
-# ③ Claude Code CLI インストール
+# 5. Claude Code CLI インストール
 
 Node.js のインストールが完了したら、Claude Code CLI をインストールします。
 
@@ -42,4 +42,4 @@ claude --version
 
 ## 次のステップ
 
-Claude Code CLI のインストールが完了したら [④ API キーの取得・設定](/setup/04-api-key) に進んでください。
+Claude Code CLI のインストールが完了したら [6. Claude Pro でログイン](/setup/06-login) に進んでください。

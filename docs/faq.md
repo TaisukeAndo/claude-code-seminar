@@ -6,7 +6,7 @@
 
 Node.js がインストールされていないか、PATH が通っていません。
 
-1. [② Node.js インストール](/setup/02-nodejs-install) の手順を再確認
+1. [2. Node.js インストール](/setup/02-nodejs-install) の手順を再確認
 2. ターミナルを**再起動**してから再度試す
 
 ### `claude: command not found` と表示される
@@ -35,30 +35,30 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ---
 
-## API キー・認証
+## ログイン・認証
 
-### API キーはどこで取得できますか？
+### ログイン時にブラウザが開かない
 
-[Anthropic Console](https://console.anthropic.com/) の「API Keys」から取得できます。  
-詳しくは [④ API キーの取得・設定](/setup/04-api-key) を参照してください。
+ターミナルに表示された URL を手動でブラウザにコピー＆ペーストしてアクセスしてください。
 
-### `AuthenticationError` や `Invalid API key` と表示される
+### `You don't have an active subscription` と表示される
 
-API キーが正しく設定されていない可能性があります。
+Claude Pro プランへの加入が必要です。[https://claude.ai/](https://claude.ai/) でプランを確認してください。
+
+### Google アカウントでログインできない
+
+- ブラウザで [https://claude.ai/](https://claude.ai/) に直接アクセスしてログインできるか確認
+- 別のブラウザやシークレットモードで試す
+- ブラウザの Cookie をクリアしてから再試行
+
+### ログイン後に `Authentication failed` と表示される
+
+一度ログアウトしてから再度ログインを試みてください:
 
 ```bash
-# macOS / Linux で確認
-echo $ANTHROPIC_API_KEY
-
-# Windows (PowerShell) で確認
-echo $env:ANTHROPIC_API_KEY
+claude logout
+claude
 ```
-
-`sk-ant-...` で始まる文字列が表示されない場合は、[④ API キーの設定手順](/setup/04-api-key) を再確認してください。
-
-### `credit balance is too low` と表示される
-
-クレジット残高が不足しています。[Anthropic Console](https://console.anthropic.com/) の Billing からクレジットを追加してください。
 
 ---
 
@@ -68,7 +68,7 @@ echo $env:ANTHROPIC_API_KEY
 
 - インターネット接続を確認してください
 - VPN を使用している場合は一時的に無効にしてみてください
-- 会社や学校のネットワークで Anthropic API (`api.anthropic.com`) がブロックされている場合があります。モバイルデータ通信（テザリング）で試してください
+- 会社や学校のネットワークでブロックされている場合があります。モバイルデータ通信（テザリング）で試してください
 
 ---
 
