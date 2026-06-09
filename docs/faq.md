@@ -79,11 +79,16 @@ Claude Pro プランへの加入が必要です。[https://claude.ai/](https://c
 
 ### 一度ログインしたのにまた認証を求められる
 
-以下を実行してログアウト→再ログインしてください:
+ターミナルで `claude` を起動し、`/logout` → `/login` の順に実行してください:
 
-```bash
-claude logout
-claude login
+```
+/logout
+```
+
+ログアウト後、再度 `/login` を実行してブラウザで認証してください:
+
+```
+/login
 ```
 
 ---

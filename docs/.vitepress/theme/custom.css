@@ -1,12 +1,12 @@
 :root {
   --vp-font-family-base: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif;
-  --vp-c-brand-1: #8b5cf6;
-  --vp-c-brand-2: #7c3aed;
-  --vp-c-brand-3: #6d28d9;
+  --vp-c-brand-1: #d97040;
+  --vp-c-brand-2: #c05a28;
+  --vp-c-brand-3: #a84818;
 }
 
 .dark {
-  --vp-c-brand-1: #a78bfa;
-  --vp-c-brand-2: #8b5cf6;
-  --vp-c-brand-3: #7c3aed;
+  --vp-c-brand-1: #f09060;
+  --vp-c-brand-2: #d97040;
+  --vp-c-brand-3: #c05a28;
 }
