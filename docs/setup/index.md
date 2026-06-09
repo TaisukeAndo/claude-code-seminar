@@ -1,17 +1,22 @@
 # 0. セットアップの全体像
 
-セミナー開始前に以下の 7 ステップを完了してください。  
+セミナー開始前に、以下の 7 ステップを完了してください。  
 **所要時間の目安: 約 30〜45 分**
+
+::: info このガイドについて
+プログラミング未経験の方でも安心して進められるよう、画面の操作方法や用語をできるだけ丁寧に説明しています。  
+わからない言葉が出てきても、各ページに解説がありますので、順番に読み進めてください。
+:::
 
 ## チェックリスト
 
-- [ ] **1.** [動作環境の確認](/setup/01-requirements) — macOS / Windows の要件チェック
-- [ ] **2.** [Node.js インストール](/setup/02-nodejs-install) — v18 以上が必要
-- [ ] **3.** [テキストエディタのインストール](/setup/03-editor) — Cursor または VS Code
-- [ ] **4.** [Claude Desktop のインストール](/setup/04-claude-desktop) — Anthropic 公式デスクトップアプリ
-- [ ] **5.** [Claude Code CLI インストール](/setup/05-claude-code-install) — `npm install -g @anthropic-ai/claude-code`
+- [ ] **1.** [動作環境の確認](/setup/01-requirements) — お使いのパソコンが対応しているか確認
+- [ ] **2.** [Node.js インストール](/setup/02-nodejs-install) — 必要なソフトをインストール
+- [ ] **3.** [テキストエディタのインストール](/setup/03-editor) — コードを書くためのアプリをインストール
+- [ ] **4.** [Claude Desktop のインストール](/setup/04-claude-desktop) — Claude の公式アプリをインストール
+- [ ] **5.** [Claude Code CLI インストール](/setup/05-claude-code-install) — Claude Code 本体をインストール
 - [ ] **6.** [Claude Pro でログイン](/setup/06-login) — Google アカウントまたはメールアドレスで認証
-- [ ] **7.** [動作確認](/setup/07-verify) — `claude` を起動して返答が返れば完了
+- [ ] **7.** [動作確認](/setup/07-verify) — 正しく動くか確認して完了
 
 ## セットアップの流れ
 
@@ -22,8 +27,13 @@
 
 ## 事前に必要なもの
 
-- **Claude Pro プラン**への加入（[https://claude.ai/](https://claude.ai/)）
+- **Claude Pro プラン**への加入（[https://claude.ai/](https://claude.ai/) から加入できます）
 - インターネット接続
+
+::: tip Claude Pro プランへの加入がまだの方
+[https://claude.ai/](https://claude.ai/) にアクセスして、アカウントを作成・Pro プランに加入してください。  
+支払いには Google アカウントまたはクレジットカードが必要です。
+:::
 
 ## 困ったときは
 
