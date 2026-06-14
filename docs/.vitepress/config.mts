@@ -87,10 +87,15 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Session 5: オリジナルスキル作成',
+        text: 'Session 5: セキュリティ対応スキル作成',
         collapsed: false,
         items: [
           { text: 'セッション概要', link: '/session5/' },
+          { text: '1. Hooks（フック）', link: '/session5/01-hooks' },
+          { text: '2. permission（パーミッション）', link: '/session5/02-permission' },
+          { text: '3. .envファイル', link: '/session5/03-env-file' },
+          { text: '4. skill-creator', link: '/session5/04-skill-creator' },
+          { text: '5. まとめ', link: '/session5/05-summary' },
         ],
       },
       {
