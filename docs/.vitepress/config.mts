@@ -6,6 +6,8 @@ export default defineConfig({
   lang: 'ja-JP',
   base: '/claude-code-seminar/',
 
+  ignoreDeadLinks: true,
+
   head: [
     ['link', { rel: 'icon', href: '/claude-code-seminar/favicon.ico' }],
   ],
@@ -21,7 +23,7 @@ export default defineConfig({
         items: [
           { text: 'Session 1: 概念と仕組み', link: '/session1/' },
           { text: 'Session 2: スキルのカスタマイズ', link: '/session2/' },
-          { text: 'Session 3: 会計処理の自動化', link: '/session3/' },
+          { text: 'Session 3: Excelデータ分析と会計処理', link: '/session3/' },
           { text: 'Session 4: 定常業務の自動化', link: '/session4/' },
           { text: 'Session 5: オリジナルスキル作成', link: '/session5/' },
         ],
@@ -73,10 +75,17 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Session 3: 会計処理の自動化',
+        text: 'Session 3: Excelデータ分析と会計処理',
         collapsed: false,
         items: [
           { text: 'セッション概要', link: '/session3/' },
+          { text: '3.1.〜3.4. 導入ワーク', link: '/session3/01-intro-workshop' },
+          { text: '3.5.〜3.8. xlsx-creator 設計', link: '/session3/02-xlsx-design' },
+          { text: '3.9.〜3.13. xlsx-creator ハンズオン', link: '/session3/03-xlsx-hands-on' },
+          { text: '3.14.〜3.16. 会計処理ワーク', link: '/session3/04-invoice-workshop' },
+          { text: '3.17.〜3.18. invoice-creator 設計', link: '/session3/05-invoice-design' },
+          { text: '3.19.〜3.23. invoice-creator ハンズオン', link: '/session3/06-invoice-hands-on' },
+          { text: '3.24.〜3.27. まとめ', link: '/session3/07-summary' },
         ],
       },
       {

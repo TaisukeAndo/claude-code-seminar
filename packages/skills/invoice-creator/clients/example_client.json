@@ -1,0 +1,14 @@
+{
+  "id": "example_client",
+  "name": "株式会社サンプル",
+  "honorific": "御中",
+  "zip": "150-0001",
+  "address": "東京都渋谷区〇〇2-3-4",
+  "tel": "03-YYYY-YYYY",
+  "fax": "",
+  "email": "contact@sample-corp.example.com",
+  "contact_person": "鈴木 花子",
+  "contact_title": "経理部長",
+  "payment_terms": "末締め翌月末払い",
+  "notes": ""
+}

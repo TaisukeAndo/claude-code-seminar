@@ -58,25 +58,19 @@ npx degit TaisukeAndo/claude-code-seminar/.claude/agents .claude/agents
 
 ## 2.10. DOCXスキルをダウンロードする
 
-**① スキルフォルダに移動する**
+**① DOCXスキルをダウンロードする**
 
 ```bash
-cd .claude/skills
+npx degit TaisukeAndo/claude-code-seminar/packages/skills/docx-creator .claude/skills/docx-creator
 ```
 
 `.claude/skills` は、Claude Code がスキル（`/コマンド`）を検索するフォルダです。  
 ここにフォルダを配置することで、スキルとして自動的に認識されます。
 
-**② DOCXスキルをダウンロードする**
+**② ダウンロードされたファイルを確認する**
 
 ```bash
-npx degit TaisukeAndo/claude-code-seminar/.claude/skills/create-docx create-docx
-```
-
-**③ ダウンロードされたファイルを確認する**
-
-```bash
-ls create-docx/
+ls .claude/skills/docx-creator/
 ```
 
 `ls` は「list（一覧表示する）」の略です。

@@ -9,28 +9,28 @@
 
 ## 2.19. PPTXスキルをダウンロードする
 
-**① スキルフォルダに移動する**
+**① プロジェクトフォルダに移動する**
 
 ターミナルを開き、以下を入力して `Enter` を押してください。
 
 ```bash
-cd ~/Desktop/claude-code-seminar/.claude/skills
+cd ~/Desktop/claude-code-seminar
 ```
 
 ::: tip 前の手順からターミナルを開きっぱなしにしている場合
-2.10. でスキルフォルダに移動した後、別のフォルダに移動した場合は上記のコマンドで改めてスキルフォルダに移動してください。
+引き続きターミナルを開いている場合は、プロジェクトのルートフォルダにいることを確認してください。
 :::
 
 **② PPTXスキルをダウンロードする**
 
 ```bash
-npx degit TaisukeAndo/claude-code-seminar/.claude/skills/create-pptx create-pptx
+npx degit TaisukeAndo/claude-code-seminar/packages/skills/pptx-creator .claude/skills/pptx-creator
 ```
 
 **③ ダウンロードを確認する**
 
 ```bash
-ls create-pptx/
+ls .claude/skills/pptx-creator/
 ```
 
 `SKILL.md` と `scripts/` が表示されれば成功です。
@@ -47,11 +47,6 @@ PPTX スキルは、スライドの内容をあらかじめファイルに書い
 2. 「File」メニュー →「Open Folder」でプロジェクトフォルダを開く
 3. 左側のファイルツリー上で右クリック →「New File」を選択する
 4. ファイル名として `slide-outline.md` と入力して `Enter` を押す
-
-::: warning スクリーンショット挿入箇所
-**保存先:** `docs/public/images/session2/ss-01-new-file-cursor.png`  
-**撮影内容:** Cursor でプロジェクトフォルダが開かれており、ファイルツリー上で右クリックしたメニューに「New File」が表示されている状態
-:::
 
 **② アウトラインの内容を入力する**
 
@@ -193,12 +188,7 @@ Windows の場合:
 
 1. Cursor でプロジェクトフォルダを開く
 2. 左側のファイルツリーで `.claude` フォルダをクリックして展開する
-3. `skills` → `create-pptx` → `SKILL.md` をクリックして開く
-
-::: warning スクリーンショット挿入箇所
-**保存先:** `docs/public/images/session2/ss-02-skill-md-editor.png`  
-**撮影内容:** Cursor で `.claude/skills/create-pptx/SKILL.md` が開かれている画面。左側にフォルダツリー、右側に SKILL.md の内容が表示されている状態
-:::
+3. `skills` → `pptx-creator` → `SKILL.md` をクリックして開く
 
 **カスタマイズできる主な項目**
 
@@ -206,7 +196,7 @@ SKILL.md の先頭部分（フロントマター）には以下のような設�
 
 ```yaml
 ---
-name: create-pptx
+name: pptx-creator
 description: PowerPoint プレゼン資料を自動生成する。「スライドを作って」「PPT を作成して」などのリクエストに対してこのスキルを使う。
 ---
 ```
