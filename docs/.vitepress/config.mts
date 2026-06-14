@@ -49,10 +49,13 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'セッション概要', link: '/session1/' },
-          { text: '1. AIとLLMの仕組み', link: '/session1/01-what-is-ai' },
-          { text: '2. Claude Codeとは何か', link: '/session1/02-what-is-claude-code' },
-          { text: '3. どのように動作するか', link: '/session1/03-how-it-works' },
-          { text: '4. AIとの向き合い方', link: '/session1/04-ai-mindset' },
+          { text: '1. イントロ', link: '/session1/01-intro' },
+          { text: '2. プロンプトエンジニアリングとは', link: '/session1/04-prompt-engineering' },
+          { text: '3. Claudeってなんだ', link: '/session1/05-claude' },
+          { text: '4. Claude Codeってなんだ', link: '/session1/06-claude-code' },
+          { text: '5. コンテキストエンジニアリングとは', link: '/session1/07-context-engineering' },
+          { text: '6. 7つの道具', link: '/session1/08-seven-tools' },
+          { text: 'まとめ', link: '/session1/09-summary' },
         ],
       },
       {
@@ -74,10 +77,6 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'セッション概要', link: '/session3/' },
-          { text: '1. Excelデータ処理の自動化', link: '/session3/01-excel-data' },
-          { text: '2. MoneyForward API設定', link: '/session3/02-moneyforward-setup' },
-          { text: '3. 見積もり作成スキル', link: '/session3/03-create-estimate' },
-          { text: '4. 請求書作成スキル', link: '/session3/04-create-invoice' },
         ],
       },
       {
@@ -85,10 +84,6 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'セッション概要', link: '/session4/' },
-          { text: '1. Slackキャッチアップ', link: '/session4/01-slack-catchup' },
-          { text: '2. Gmail返信下書き', link: '/session4/02-gmail-reply' },
-          { text: '3. ToDoリスト管理', link: '/session4/03-todo-management' },
-          { text: '4. 日次ルーティンの統合', link: '/session4/04-daily-routine' },
         ],
       },
       {
@@ -96,10 +91,6 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'セッション概要', link: '/session5/' },
-          { text: '1. 業務フローを分析する', link: '/session5/01-workflow-analysis' },
-          { text: '2. スキルを設計する', link: '/session5/02-skill-design' },
-          { text: '3. スキルクリエイターで実装', link: '/session5/03-skill-creator' },
-          { text: '4. テストと改善', link: '/session5/04-test-improve' },
         ],
       },
       {
