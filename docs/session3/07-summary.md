@@ -70,27 +70,21 @@ cd ~/Desktop/claude-code-seminar
 # エージェントフォルダのダウンロード（Session 2 で実施済みの場合はスキップ）
 npx degit TaisukeAndo/claude-code-seminar/.claude/agents .claude/agents
 
-# スキルフォルダに移動する
-cd .claude/skills
-
 # xlsx-creator スキルのダウンロード
-npx degit TaisukeAndo/claude-code-seminar/.claude/skills/xlsx-creator xlsx-creator
+npx degit TaisukeAndo/claude-code-seminar/packages/skills/xlsx-creator .claude/skills/xlsx-creator
 
 # invoice-creator スキルのダウンロード
-npx degit TaisukeAndo/claude-code-seminar/.claude/skills/invoice-creator invoice-creator
+npx degit TaisukeAndo/claude-code-seminar/packages/skills/invoice-creator .claude/skills/invoice-creator
 
 # ダウンロードされたフォルダの確認
-ls xlsx-creator/
-ls invoice-creator/
+ls .claude/skills/xlsx-creator/
+ls .claude/skills/invoice-creator/
 
 # .env ファイルの作成（自社情報の設定）
-cp invoice-creator/.env.example invoice-creator/.env
+cp .claude/skills/invoice-creator/.env.example .claude/skills/invoice-creator/.env
 
 # 依存ライブラリのインストール
 pip3 install openpyxl
-
-# プロジェクトのルートフォルダに戻る
-cd ~/Desktop/claude-code-seminar
 
 # Claude Code を起動する
 claude

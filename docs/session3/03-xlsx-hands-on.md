@@ -47,22 +47,16 @@ excel-structure-researcher.md    web-researcher.md
 
 ## 3.10. xlsx-creator スキルをダウンロードする
 
-**① スキルフォルダに移動する**
+**① xlsx-creator スキルをダウンロードする**
 
 ```bash
-cd .claude/skills
+npx degit TaisukeAndo/claude-code-seminar/packages/skills/xlsx-creator .claude/skills/xlsx-creator
 ```
 
-**② xlsx-creator スキルをダウンロードする**
+**② ダウンロードされたファイルを確認する**
 
 ```bash
-npx degit TaisukeAndo/claude-code-seminar/.claude/skills/xlsx-creator xlsx-creator
-```
-
-**③ ダウンロードされたファイルを確認する**
-
-```bash
-ls xlsx-creator/
+ls .claude/skills/xlsx-creator/
 ```
 
 以下のファイルとフォルダが表示されれば成功です。

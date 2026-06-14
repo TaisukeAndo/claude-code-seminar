@@ -9,22 +9,22 @@
 
 ## 3.19. invoice-creator スキルをダウンロードする
 
-**① スキルフォルダに移動する**
+**① プロジェクトフォルダに移動する**
 
 ```bash
-cd ~/Desktop/claude-code-seminar/.claude/skills
+cd ~/Desktop/claude-code-seminar
 ```
 
 **② invoice-creator スキルをダウンロードする**
 
 ```bash
-npx degit TaisukeAndo/claude-code-seminar/.claude/skills/invoice-creator invoice-creator
+npx degit TaisukeAndo/claude-code-seminar/packages/skills/invoice-creator .claude/skills/invoice-creator
 ```
 
 **③ ダウンロードされたファイルを確認する**
 
 ```bash
-ls invoice-creator/
+ls .claude/skills/invoice-creator/
 ```
 
 以下のファイルとフォルダが表示されれば成功です。
@@ -53,7 +53,7 @@ SKILL.md    .env.example    clients/    scripts/
 **① テンプレートをコピーして .env ファイルを作成する**
 
 ```bash
-cp invoice-creator/.env.example invoice-creator/.env
+cp .claude/skills/invoice-creator/.env.example .claude/skills/invoice-creator/.env
 ```
 
 **② Cursor で .env ファイルを開いて編集する**
@@ -88,7 +88,7 @@ MY_REGISTRATION_NUMBER=T0000000000000  # インボイス登録番号（任意）
 
 ```bash
 # 例: 田中商事 というクライアントのファイルを作る場合
-cp invoice-creator/clients/example_client.json invoice-creator/clients/tanaka_shoji.json
+cp .claude/skills/invoice-creator/clients/example_client.json .claude/skills/invoice-creator/clients/tanaka_shoji.json
 ```
 
 ファイルを開いて取引先情報を記入してください。

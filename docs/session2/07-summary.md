@@ -63,21 +63,15 @@ cd ~/Desktop/claude-code-seminar
 # エージェントフォルダのダウンロード（セッション全体で最初に1回）
 npx degit TaisukeAndo/claude-code-seminar/.claude/agents .claude/agents
 
-# スキルフォルダに移動する
-cd .claude/skills
-
 # DOCX スキルのダウンロード
-npx degit TaisukeAndo/claude-code-seminar/.claude/skills/create-docx create-docx
+npx degit TaisukeAndo/claude-code-seminar/packages/skills/docx-creator .claude/skills/docx-creator
 
 # PPTX スキルのダウンロード
-npx degit TaisukeAndo/claude-code-seminar/.claude/skills/create-pptx create-pptx
+npx degit TaisukeAndo/claude-code-seminar/packages/skills/pptx-creator .claude/skills/pptx-creator
 
 # ファイル・フォルダの中身を確認する
-ls create-docx/
-ls create-pptx/
-
-# プロジェクトのルートフォルダに戻る
-cd ~/Desktop/claude-code-seminar
+ls .claude/skills/docx-creator/
+ls .claude/skills/pptx-creator/
 
 # Claude Code を起動する
 claude
@@ -106,11 +100,11 @@ claude
 ### ライブラリドキュメント
 
 4. **python-docx — Python で Word ファイルを操作するライブラリ**  
-   `create-docx` スキルが内部で使用しているライブラリの公式ドキュメントです。  
+   `docx-creator` スキルが内部で使用しているライブラリの公式ドキュメントです。  
    https://python-docx.readthedocs.io/en/latest/
 
 5. **python-pptx — Python で PowerPoint ファイルを操作するライブラリ**  
-   `create-pptx` スキルが内部で使用しているライブラリの公式ドキュメントです。  
+   `pptx-creator` スキルが内部で使用しているライブラリの公式ドキュメントです。  
    https://python-pptx.readthedocs.io/en/latest/
 
 ### 関連情報
