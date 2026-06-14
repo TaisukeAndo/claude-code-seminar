@@ -1,0 +1,5 @@
+{
+  "document_json": "/Users/ando/Desktop/claude-code-1day-seminar/tmp/seminar_document.json",
+  "output_docx": "/Users/ando/Desktop/claude-code-1day-seminar/output/claude-code-seminar.docx",
+  "rerun_cmd": "python3 /Users/ando/Desktop/claude-code-1day-seminar/.claude/skills/docx-creator/scripts/create_docx.py /Users/ando/Desktop/claude-code-1day-seminar/tmp/seminar_document.json /Users/ando/Desktop/claude-code-1day-seminar/output/claude-code-seminar.docx"
+}
