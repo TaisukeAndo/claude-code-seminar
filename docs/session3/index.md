@@ -19,10 +19,10 @@ Excelデータ処理  →  MoneyForward API設定  →  見積もり作成スキ
 
 ## チェックリスト
 
-- [ ] **1.** [Excelデータ処理の自動化](/session3/01-excel-data) — CSV・Excel の読み込みと集計を Claude Code に任せる
-- [ ] **2.** [MoneyForward API設定](/session3/02-moneyforward-setup) — API キーの取得とクレデンシャル設定
-- [ ] **3.** [見積もり作成スキル](/session3/03-create-estimate) — 「見積もりを作って」の一言で MoneyForward に見積書を作成
-- [ ] **4.** [請求書作成スキル](/session3/04-create-invoice) — 見積もりから請求書への変換を自動化
+- [ ] **1.** Excelデータ処理の自動化 — CSV・Excel の読み込みと集計を Claude Code に任せる
+- [ ] **2.** MoneyForward API設定 — API キーの取得とクレデンシャル設定
+- [ ] **3.** 見積もり作成スキル — 「見積もりを作って」の一言で MoneyForward に見積書を作成
+- [ ] **4.** 請求書作成スキル — 見積もりから請求書への変換を自動化
 
 ## 対応サービス
 
@@ -39,4 +39,4 @@ MoneyForward・freee の API を利用するには**有料プラン**が必要�
 
 ## 次のステップ
 
-[1. Excelデータ処理の自動化](/session3/01-excel-data) から読み始めましょう。
+セミナー当日に資料を公開します。

@@ -19,10 +19,10 @@ AI・LLM の仕組み  →  Claude Code とは  →  動作フロー  →  AIと
 
 ## チェックリスト
 
-- [ ] **1.** [AIとLLMの仕組み](/session1/01-what-is-ai) — 大規模言語モデルが何をしているかを理解する
-- [ ] **2.** [Claude Codeとは何か](/session1/02-what-is-claude-code) — CLIツールとしての特徴と他のAIツールとの違い
-- [ ] **3.** [どのように動作するか](/session1/03-how-it-works) — コマンド実行からレスポンスまでのフローを把握する
-- [ ] **4.** [AIとの向き合い方](/session1/04-ai-mindset) — 効果的に指示を出すマインドセットと基本パターン
+- [ ] **1.** [プロンプトエンジニアリングとは](/session1/04-prompt-engineering) — 大規模言語モデルへの指示の基本を理解する
+- [ ] **2.** [Claudeってなんだ](/session1/05-claude) — Claude の特徴と他のAIとの違い
+- [ ] **3.** [Claude Codeってなんだ](/session1/06-claude-code) — CLIツールとしての能力とリスクを把握する
+- [ ] **4.** [コンテキストエンジニアリングとは](/session1/07-context-engineering) — 効果的な指示を出すための準備と基盤
 
 ## このセッションが重要な理由
 
@@ -34,4 +34,4 @@ Claude Code は非常に強力なツールですが、**仕組みを知らずに
 
 ## 次のステップ
 
-[1. AIとLLMの仕組み](/session1/01-what-is-ai) から読み始めましょう。
+[1. プロンプトエンジニアリングとは](/session1/04-prompt-engineering) から読み始めましょう。
