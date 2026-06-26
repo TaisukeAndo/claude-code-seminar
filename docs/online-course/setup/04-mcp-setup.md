@@ -21,26 +21,31 @@ Google カレンダーの予定を確認したり、Google ドライブのファ
 
 ## 接続手順
 
-### ① MCP 一覧を表示する
+### ① Code タブのチャット入力欄を開く
 
-Claude Desktop を起動し、チャット入力欄に以下を入力して `Enter` を押してください:
+Claude Desktop を起動し、アプリ上部の **「Code」** タブをクリックしてください。  
+プロジェクトフォルダを選択してセッションを開始すると、画面下部にチャット入力欄が表示されます。
+
+### ② /mcp コマンドを実行する
+
+チャット入力欄に以下を入力して `Enter` を押してください:
 
 ```
 /mcp
 ```
 
-画面に接続可能なサービスの一覧が表示されます。
+接続可能なサービスの一覧が表示されます。
 
-### ② Gmail を接続する
+### ③ Gmail を接続する
 
 1. 一覧から **「Gmail」** の行にある **「Connect」** ボタンをクリック
 2. ブラウザが自動で開き、**[https://accounts.google.com](https://accounts.google.com)** の Google ログイン画面が表示される
 3. Gmail に使用している Google アカウントのメールアドレスを入力し **「次へ」** をクリック
 4. パスワードを入力し **「次へ」** をクリック
-5. 「Claude Code が Google アカウントへのアクセスを求めています」という画面が表示されたら、内容を確認して **「許可」** をクリック
+5. 「Claude Code が Google アカウントへのアクセスを求めています」という画面が表示されたら **「許可」** をクリック
 6. 「接続が完了しました」と表示されたらブラウザを閉じ、Claude Desktop に戻る
 
-### ③ Microsoft 365 を接続する
+### ④ Microsoft 365 を接続する
 
 1. 一覧から **「Microsoft 365」** の行にある **「Connect」** ボタンをクリック
 2. ブラウザが自動で開き、**[https://login.microsoftonline.com](https://login.microsoftonline.com)** の Microsoft ログイン画面が表示される
@@ -54,25 +59,25 @@ Claude Desktop を起動し、チャット入力欄に以下を入力して `Ent
 または個人の Microsoft アカウント（例: `名前@outlook.com`）でログインしてください。
 :::
 
-### ④ Google カレンダーを接続する
+### ⑤ Google カレンダーを接続する
 
 1. 一覧から **「Google Calendar」** の行にある **「Connect」** ボタンをクリック
-2. ブラウザが自動で開き、Google ログイン画面が表示される
-3. Google アカウントでログイン（② と同じ手順）
+2. ブラウザが自動で開き、Google ログイン画面（[https://accounts.google.com](https://accounts.google.com)）が表示される
+3. Google アカウントでログイン（③ と同じ手順）
 4. 「Claude Code が Google カレンダーへのアクセスを求めています」という画面で **「許可」** をクリック
 5. 「接続が完了しました」と表示されたらブラウザを閉じ、Claude Desktop に戻る
 
-### ⑤ Google ドライブを接続する
+### ⑥ Google ドライブを接続する
 
 1. 一覧から **「Google Drive」** の行にある **「Connect」** ボタンをクリック
-2. ブラウザが自動で開き、Google ログイン画面が表示される
-3. Google アカウントでログイン（② と同じ手順）
+2. ブラウザが自動で開き、Google ログイン画面（[https://accounts.google.com](https://accounts.google.com)）が表示される
+3. Google アカウントでログイン（③ と同じ手順）
 4. 「Claude Code が Google ドライブへのアクセスを求めています」という画面で **「許可」** をクリック
 5. 「接続が完了しました」と表示されたらブラウザを閉じ、Claude Desktop に戻る
 
 ## 接続の確認
 
-すべて接続したら、Claude Code のチャット入力欄に再度 `/mcp` と入力して `Enter` を押してください。
+すべて接続したら、チャット入力欄に再度 `/mcp` と入力して `Enter` を押してください。
 
 ```
 /mcp

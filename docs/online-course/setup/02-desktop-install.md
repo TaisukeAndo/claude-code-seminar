@@ -1,28 +1,26 @@
 # ステップ② Claude Desktop のインストール
 
-Anthropic 公式のデスクトップアプリ「**Claude Desktop**」をインストールし、  
-アプリ内で **Claude Code** 機能を有効にします。
+Anthropic 公式のデスクトップアプリをインストールし、  
+アプリ内の **Code タブ** から Claude Code を使えるようにします。
 
 ## Claude Desktop とは？
 
 Claude Desktop は、ブラウザを開かなくても Claude と会話できる公式アプリです。  
-最近のアップデートにより、このアプリの中から直接 **Claude Code**（AI によるコード・ファイル操作）を使えるようになりました。
-
-ターミナル（黒い画面）を使わずに Claude Code を使用できるのが Desktop 版の特長です。
+アプリ上部の **「Code」タブ** を選ぶと、ターミナル（黒い画面）を使わずに Claude Code の機能を利用できます。
 
 ## インストール手順 — macOS
 
 ### ① ダウンロードする
 
-ブラウザで **[https://claude.ai/download](https://claude.ai/download)** を開き、**「Download for Mac」** ボタンをクリックしてください。  
-**`Claude.dmg`** というファイルがダウンロードフォルダに保存されます。
+ブラウザで **[https://claude.com/download](https://claude.com/download)** を開き、**「Download for macOS」** ボタンをクリックしてください。  
+ダウンロードフォルダにファイルが保存されます。
 
 ### ② アプリをインストールする
 
-1. ダウンロードフォルダにある **`Claude.dmg`** をダブルクリックして開く
+1. ダウンロードフォルダにある **`.dmg`** ファイルをダブルクリックして開く
 2. ウィンドウが開き、左に **「Claude」** アイコン、右に **「Applications」** フォルダが表示される
 3. **「Claude」アイコンを「Applications」フォルダの上にドラッグ＆ドロップ**する
-4. コピーが完了したらウィンドウを閉じる（デスクトップに表示されているディスクのアイコンを右クリック →「取り出す」でも OK）
+4. コピーが完了したらウィンドウを閉じる
 
 ### ③ アプリを起動する
 
@@ -34,12 +32,12 @@ Claude Desktop は、ブラウザを開かなくても Claude と会話できる
 
 ### ① ダウンロードする
 
-ブラウザで **[https://claude.ai/download](https://claude.ai/download)** を開き、**「Download for Windows」** ボタンをクリックしてください。  
-**`Claude-Setup.exe`** というファイルがダウンロードフォルダに保存されます。
+ブラウザで **[https://claude.com/download](https://claude.com/download)** を開き、**「Download for Windows」** ボタンをクリックしてください。  
+ダウンロードフォルダにファイルが保存されます。
 
 ### ② アプリをインストールする
 
-1. ダウンロードフォルダにある **`Claude-Setup.exe`** をダブルクリック
+1. ダウンロードフォルダにある **`.exe`** ファイルをダブルクリック
 2. 「このアプリがデバイスに変更を加えることを許可しますか？」→ **「はい」** をクリック
 3. インストールが自動で進む（数十秒）
 4. 完了すると Claude Desktop が自動で起動する
@@ -50,36 +48,19 @@ Claude Desktop は、ブラウザを開かなくても Claude と会話できる
 
 1. **「Continue with Google」** をクリック — ステップ①で使用した Google アカウントでログイン
 2. または **「Sign in with email」** をクリック — メールアドレスとパスワードを入力
-3. ホーム画面（チャット入力欄が表示された画面）が表示されたらログイン完了
+3. ホーム画面が表示されたらログイン完了
 
-## Claude Code 機能を有効にする
+## Claude Code（Code タブ）を開く
 
-Claude Desktop 内で Claude Code を使うために、設定画面から機能を有効化します。
+1. アプリ上部中央に **「Chat」「Cowork」「Code」** の 3 つのタブが表示されている
+2. **「Code」** タブをクリック
 
-### ① 設定画面を開く
-
-**macOS の場合:**  
-画面上部のメニューバーにある **「Claude」** をクリックし、**「Settings...」**（または **`⌘ ,`**）を選択してください。
-
-**Windows の場合:**  
-ウィンドウ左上の **「≡」（三本線アイコン）** をクリックし、表示されたメニューから **「Settings」** を選択してください。
-
-### ② Claude Code を有効にする
-
-設定画面が開いたら:
-
-1. 左側メニューの **「Claude Code」** をクリック
-2. **「Enable Claude Code」** と書かれたトグルスイッチをクリックしてオン（青色）にする
-3. 確認ダイアログが表示されたら **「Enable」** をクリック
-
-### ③ 有効化を確認する
-
-設定画面を閉じてホーム画面に戻ったとき、チャット入力欄の下部または周辺に **「Claude Code」** のアイコンが表示されていれば有効化完了です。
-
-::: tip 設定画面に「Claude Code」が表示されない場合
-アプリのバージョンが古い可能性があります。  
-macOS はメニューバーの **「Claude」→「Check for Updates...」**、Windows は **「≡」→「Check for Updates」** からアップデートを確認してください。
+::: tip 「Code」タブをクリックするとアップグレードを促す画面が表示された場合
+Pro プランへの加入がまだ完了していない可能性があります。  
+[ステップ①](/online-course/setup/01-pro-subscription) に戻って Pro プランへの加入を完了してください。
 :::
+
+3. 「Select folder」ボタンが表示されたら、作業したいフォルダを選択するとセッションを開始できます
 
 ## 次のステップ
 
