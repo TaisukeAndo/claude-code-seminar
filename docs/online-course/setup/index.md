@@ -15,13 +15,6 @@ Claude Code Desktop 版を使い始めるまでの 4 ステップを説明しま
 - [ ] **ステップ③** [Git のインストール](/online-course/setup/03-git-install) — 変更履歴管理ソフトのインストール
 - [ ] **ステップ④** [MCP サーバーの接続設定](/online-course/setup/04-mcp-setup) — 外部サービスとの連携設定
 
-## セットアップの流れ
-
-```
-Claude Pro 加入 → Claude Desktop → Git → MCP 接続
-    ステップ①         ステップ②    ステップ③  ステップ④
-```
-
 ## 事前に必要なもの
 
 - インターネット接続

@@ -43,6 +43,8 @@ git --version
 ページを開くと自動的にダウンロードが始まります。  
 自動でダウンロードが始まらない場合は、ページ内に表示されている **「Click here to download」** というリンクをクリックしてください。
 
+![screen-shot-git-download.png](../../public/online-course/screen-shot-git-download.png)
+
 ### ② インストールする
 
 1. ダウンロードフォルダにダウンロードされたファイルをダブルクリック

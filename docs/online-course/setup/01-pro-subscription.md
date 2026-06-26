@@ -22,15 +22,14 @@ Claude Pro は、Anthropic が提供する月額サブスクリプションの�
 
 ブラウザで **[https://claude.ai/](https://claude.ai/)** を開いてください。
 
-### ② 「Sign up」からアカウントを作成する
-
-画面中央または右上にある **「Sign up」** ボタンをクリックしてください。
+### ② 「login」からログインまたはアカウントを作成する
 
 登録方法を選択する画面が表示されます:
 
-- **「Continue with Google」** をクリック — お持ちの Google アカウントでそのまま登録されます
-- **「Continue with Apple」** をクリック — Apple ID で登録されます
-- **「Continue with email」** をクリック — メールアドレスと任意のパスワードを入力して登録します
+- **「Googleで続ける」** をクリック — お持ちの Google アカウントでそのまま登録されます
+- **「メールで続ける」** をクリック — メールアドレスと任意のパスワードを入力して登録します
+
+![screen-shot-login.png](../../public/online-course/screen-shot-login.png)
 
 ### ③ 名前と利用規約の確認
 
@@ -50,6 +49,8 @@ Pro プランを含む各プランの比較表が表示されます。
 **「Pro」** プランの欄にある **「Try Claude」** ボタンをクリックしてください。
 
 ログインしていない場合はログイン画面が表示されます。作成したアカウントでログインしてから操作を続けてください。
+
+![screen-shot-plan.png](../../public/online-course/screen-shot-plan.png)
 
 ### ③ 支払い情報を入力する
 

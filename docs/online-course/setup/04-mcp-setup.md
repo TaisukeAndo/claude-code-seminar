@@ -28,6 +28,8 @@ Claude Desktop を起動し、アプリ上部の **「Code」** タブをクリ�
 
 ### ② /mcp コマンドを実行する
 
+![screen-shot-command-mcp.png](../../public/online-course/screen-shot-command-mcp.png)
+
 チャット入力欄に以下を入力して `Enter` を押してください:
 
 ```
@@ -36,9 +38,11 @@ Claude Desktop を起動し、アプリ上部の **「Code」** タブをクリ�
 
 接続可能なサービスの一覧が表示されます。
 
+![screen-shot-mcp-overlay.png](../../public/online-course/screen-shot-mcp-overlay.png)
+
 ### ③ Gmail を接続する
 
-1. 一覧から **「Gmail」** の行にある **「Connect」** ボタンをクリック
+1. 一覧から **「Gmail」** の行にある **「+」** ボタンをクリック
 2. ブラウザが自動で開き、**[https://accounts.google.com](https://accounts.google.com)** の Google ログイン画面が表示される
 3. Gmail に使用している Google アカウントのメールアドレスを入力し **「次へ」** をクリック
 4. パスワードを入力し **「次へ」** をクリック
@@ -47,7 +51,7 @@ Claude Desktop を起動し、アプリ上部の **「Code」** タブをクリ�
 
 ### ④ Microsoft 365 を接続する
 
-1. 一覧から **「Microsoft 365」** の行にある **「Connect」** ボタンをクリック
+1. 一覧から **「Microsoft 365」** の行にある **「+」** ボタンをクリック
 2. ブラウザが自動で開き、**[https://login.microsoftonline.com](https://login.microsoftonline.com)** の Microsoft ログイン画面が表示される
 3. Microsoft アカウントのメールアドレスを入力し **「次へ」** をクリック
 4. パスワードを入力し **「サインイン」** をクリック
@@ -61,7 +65,7 @@ Claude Desktop を起動し、アプリ上部の **「Code」** タブをクリ�
 
 ### ⑤ Google カレンダーを接続する
 
-1. 一覧から **「Google Calendar」** の行にある **「Connect」** ボタンをクリック
+1. 一覧から **「Google Calendar」** の行にある **「+」** ボタンをクリック
 2. ブラウザが自動で開き、Google ログイン画面（[https://accounts.google.com](https://accounts.google.com)）が表示される
 3. Google アカウントでログイン（③ と同じ手順）
 4. 「Claude Code が Google カレンダーへのアクセスを求めています」という画面で **「許可」** をクリック
@@ -69,26 +73,11 @@ Claude Desktop を起動し、アプリ上部の **「Code」** タブをクリ�
 
 ### ⑥ Google ドライブを接続する
 
-1. 一覧から **「Google Drive」** の行にある **「Connect」** ボタンをクリック
+1. 一覧から **「Google Drive」** の行にある **「+」** ボタンをクリック
 2. ブラウザが自動で開き、Google ログイン画面（[https://accounts.google.com](https://accounts.google.com)）が表示される
 3. Google アカウントでログイン（③ と同じ手順）
 4. 「Claude Code が Google ドライブへのアクセスを求めています」という画面で **「許可」** をクリック
 5. 「接続が完了しました」と表示されたらブラウザを閉じ、Claude Desktop に戻る
-
-## 接続の確認
-
-すべて接続したら、チャット入力欄に再度 `/mcp` と入力して `Enter` を押してください。
-
-```
-/mcp
-```
-
-以下の 4 つのサービスが **「Connected」** と表示されていれば設定完了です:
-
-- Gmail — Connected
-- Microsoft 365 — Connected
-- Google Calendar — Connected
-- Google Drive — Connected
 
 ## トラブルシューティング
 

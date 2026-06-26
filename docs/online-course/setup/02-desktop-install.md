@@ -46,9 +46,11 @@ Claude Desktop は、ブラウザを開かなくても Claude と会話できる
 
 アプリが起動すると、ログイン画面が表示されます。
 
-1. **「Continue with Google」** をクリック — ステップ①で使用した Google アカウントでログイン
-2. または **「Sign in with email」** をクリック — メールアドレスとパスワードを入力
+1. **「Googleで続ける」** をクリック — ステップ①で使用した Google アカウントでログイン
+2. または **「メールで続ける」** をクリック — メールアドレスとパスワードを入力
 3. ホーム画面が表示されたらログイン完了
+
+![screen-shot-desktop-login.png](../../public/online-course/screen-shot-desktop-login.png)
 
 ## Claude Code（Code タブ）を開く
 
