@@ -3,16 +3,12 @@
 Anthropic 公式のデスクトップアプリ「**Claude Desktop**」をインストールし、  
 アプリ内で **Claude Code** 機能を有効にします。
 
----
-
 ## Claude Desktop とは？
 
 Claude Desktop は、ブラウザを開かなくても Claude と会話できる公式アプリです。  
 最近のアップデートにより、このアプリの中から直接 **Claude Code**（AI によるコード・ファイル操作）を使えるようになりました。
 
 ターミナル（黒い画面）を使わずに Claude Code を使用できるのが Desktop 版の特長です。
-
----
 
 ## インストール手順 — macOS
 
@@ -34,8 +30,6 @@ Claude Desktop は、ブラウザを開かなくても Claude と会話できる
 1. **Finder → アプリケーション → Claude** をダブルクリック
 2. 「インターネットからダウンロードされたアプリです」と表示されたら **「開く」** をクリック
 
----
-
 ## インストール手順 — Windows
 
 ### ① ダウンロードする
@@ -51,8 +45,6 @@ Claude Desktop は、ブラウザを開かなくても Claude と会話できる
 3. インストールが自動で進む
 4. 完了すると Claude Desktop が自動で起動する
 
----
-
 ## Claude Desktop にログインする
 
 アプリが起動したら、Claude Pro のアカウントでログインします。
@@ -60,8 +52,6 @@ Claude Desktop は、ブラウザを開かなくても Claude と会話できる
 1. **「Continue with Google」** または **「Sign in with email」** をクリック
 2. ステップ①で作成した Claude Pro アカウントでログイン
 3. ホーム画面が表示されたらログイン完了
-
----
 
 ## Claude Code 機能を有効にする
 
@@ -88,8 +78,6 @@ Claude Desktop のホーム画面に戻り、入力欄の近くに **「Claude C
 設定画面に「Claude Code」の項目が表示されない場合は、アプリのバージョンが古い可能性があります。  
 メニューの「Check for Updates」からアップデートを確認してください。
 :::
-
----
 
 ## 次のステップ
 

@@ -3,8 +3,6 @@
 Claude Code に外部サービスを連携させる **MCP（エムシーピー）** の設定を行います。  
 Gmail・Microsoft 365・Google カレンダー・Google ドライブを Claude から操作できるようになります。
 
----
-
 ## MCP とは？
 
 MCP（Model Context Protocol）は、**Claude Code に外部サービスを接続する仕組み**です。
@@ -14,8 +12,6 @@ Google カレンダーの予定を確認したり、Google ドライブのファ
 
 Claude Code Desktop では、`/mcp` というコマンドで接続済みのサービス一覧を確認・管理できます。
 
----
-
 ## 今回接続するサービス
 
 | サービス | できること |
@@ -24,8 +20,6 @@ Claude Code Desktop では、`/mcp` というコマンドで接続済みのサ�
 | **Microsoft 365** | Outlook メール・OneDrive・予定表の操作 |
 | **Google カレンダー** | 予定の確認・追加・変更 |
 | **Google ドライブ** | ファイルの検索・閲覧・作成 |
-
----
 
 ## 接続手順
 
@@ -40,8 +34,6 @@ Claude Desktop を開き、ホーム画面で Claude Code を起動してくだ�
 
 接続可能な MCP サーバーの一覧が表示されます。
 
----
-
 ### ② Gmail を接続する
 
 1. `/mcp` の一覧から **「Gmail」** を選択
@@ -50,8 +42,6 @@ Claude Desktop を開き、ホーム画面で Claude Code を起動してくだ�
 4. Gmail に使用している **Google アカウント** でログイン
 5. 「Claude Code が Gmail にアクセスすることを許可しますか？」と表示されたら **「許可」** をクリック
 6. ブラウザを閉じ、Claude Code に戻ると接続完了
-
----
 
 ### ③ Microsoft 365 を接続する
 
@@ -67,8 +57,6 @@ Claude Desktop を開き、ホーム画面で Claude Code を起動してくだ�
 または個人の Microsoft アカウント（`名前@outlook.com` など）でログインしてください。
 :::
 
----
-
 ### ④ Google カレンダーを接続する
 
 1. `/mcp` の一覧から **「Google Calendar」** を選択
@@ -78,8 +66,6 @@ Claude Desktop を開き、ホーム画面で Claude Code を起動してくだ�
 5. 「Claude Code が Google カレンダーにアクセスすることを許可しますか？」→ **「許可」**
 6. ブラウザを閉じ、Claude Code に戻ると接続完了
 
----
-
 ### ⑤ Google ドライブを接続する
 
 1. `/mcp` の一覧から **「Google Drive」** を選択
@@ -88,8 +74,6 @@ Claude Desktop を開き、ホーム画面で Claude Code を起動してくだ�
 4. ドライブに使用している **Google アカウント** でログイン
 5. 「Claude Code が Google ドライブにアクセスすることを許可しますか？」→ **「許可」**
 6. ブラウザを閉じ、Claude Code に戻ると接続完了
-
----
 
 ## 接続の確認
 
@@ -106,8 +90,6 @@ Claude Desktop を開き、ホーム画面で Claude Code を起動してくだ�
 - Google Calendar ✅
 - Google Drive ✅
 
----
-
 ## トラブルシューティング
 
 **ブラウザが自動で開かない場合**  
@@ -119,8 +101,6 @@ Claude Code の画面に表示される URL をコピーして、ブラウザの
 
 **接続後に「Disconnected」と表示される場合**  
 一度 Claude Desktop を再起動し、`/mcp` で再確認してください。
-
----
 
 ## セットアップ完了
 
