@@ -11,7 +11,7 @@ Word ファイルと PowerPoint ファイルが自動で完成するようにな
 
 Claude Code に目的と構成を伝えるだけで、以下のような Word ファイルが数分で完成します。
 
-![生成されたWordドキュメントのサンプル](/session2/ss-docx-sample.png)
+![生成されたWordドキュメントのサンプル](/1day-course/session2/ss-docx-sample.png)
 
 ### PowerPoint スライドの自動生成
 
