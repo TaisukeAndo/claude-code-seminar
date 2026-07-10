@@ -1,0 +1,30 @@
+{
+  "_description": "標準の議事録テンプレート。定例会議・打ち合わせ全般に使える汎用構成。会議の性質に合わせて見出しの追加・削除・順序変更は自由に行ってよい。",
+  "metadata": {
+    "title": "会議名を記入",
+    "date": "YYYY-MM-DD",
+    "location": "会議室名 / オンライン(Zoom等)",
+    "attendees": "出席者をカンマ区切りで記入",
+    "author": "記録者名",
+    "doc_type": "minutes"
+  },
+  "style": {
+    "primary_color": "1E3A5F",
+    "heading_font": "游ゴシック",
+    "body_font": "游ゴシック",
+    "body_size": 10.5
+  },
+  "sections": [
+    {"type": "minutes_header"},
+    {"type": "heading", "text": "議題", "level": 1},
+    {"type": "numbered", "items": ["議題1", "議題2"]},
+    {"type": "heading", "text": "決定事項", "level": 1},
+    {"type": "bullets", "items": ["決定事項1", "決定事項2"]},
+    {"type": "heading", "text": "議論内容", "level": 1},
+    {"type": "paragraph", "text": "議題ごとの主な議論内容を要約する。発言者名は必要な範囲で言及する。"},
+    {"type": "heading", "text": "アクションアイテム", "level": 1},
+    {"type": "table", "headers": ["タスク", "担当者", "期限"], "rows": [["", "", ""]]},
+    {"type": "heading", "text": "次回予定", "level": 1},
+    {"type": "paragraph", "text": "次回会議の日時・議題。未定の場合は「未定」と記載する。"}
+  ]
+}
