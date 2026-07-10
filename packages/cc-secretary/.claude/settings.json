@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+
+  "permissions": {
+    "allow": [
+      "Bash(python3 *)",
+      "Bash(python3.* *)",
+      "Bash(pip3 install *)",
+      "Bash(ls *)",
+      "Bash(ls)",
+      "Bash(find *)",
+      "Bash(mkdir *)",
+      "Bash(mkdir -p *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(open *)",
+      "Bash(cat *)",
+      "Bash(echo *)",
+      "Bash(du *)",
+      "Bash(wc *)",
+      "Bash(date)",
+      "Bash(uname)",
+      "Bash(which *)",
+      "Bash(jq *)",
+      "Bash(basename *)",
+      "Bash(dirname *)",
+      "Bash(chmod +x *)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(sudo rm *)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git reset --hard*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/secrets/**)",
+      "Read(**/credentials/**)",
+      "Read(**/invoice-creator/clients/**)",
+      "Read(**/invoice-creator/.env)"
+    ]
+  },
+
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/session-start.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/block-dangerous.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/file-notify.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
