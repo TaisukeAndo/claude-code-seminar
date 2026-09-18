@@ -1,0 +1,4 @@
+# 対象とする自治体名と、プロポーザル（公募型）情報の一覧ページURLを設定する。
+# 初期値はセミナー教材での例（鳥取県）。他の自治体を対象にしたい場合は書き換える。
+prefecture = 鳥取県
+proposal_list_url = https://www.pref.tottori.lg.jp/9511.htm
