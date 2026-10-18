@@ -3,6 +3,7 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "my-app",
   "main": "src/index.js",
+  // 実行環境が対応している過去の日付にする（「今日」を入れると起動しないことがある）
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./public",
@@ -13,7 +14,7 @@
   "vars": {
     "ENVIRONMENT": "production"
   },
-  // 本番用のD1。database_id は `wrangler d1 create` の結果で置き換える
+  // 本番用のD1。database_id は、D1を作ったときの結果で置き換える
   "d1_databases": [
     {
       "binding": "DB",
@@ -21,18 +22,5 @@
       "database_id": "00000000-0000-0000-0000-000000000000",
       "migrations_dir": "migrations"
     }
-  ],
-  // Previews（PRごとの確認用環境）。D1は自動では分離されないので、本番とは別のDBを指定する
-  "previews": {
-    "vars": {
-      "ENVIRONMENT": "preview"
-    },
-    "d1_databases": [
-      {
-        "binding": "DB",
-        "database_name": "my-app-db-staging",
-        "database_id": "00000000-0000-0000-0000-000000000000"
-      }
-    ]
-  }
+  ]
 }
