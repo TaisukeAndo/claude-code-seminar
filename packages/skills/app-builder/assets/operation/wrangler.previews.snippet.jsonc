@@ -1,0 +1,17 @@
+// 運用の段階で、PRごとの確認用環境（Workers Previews）を使うときに、
+// アプリの wrangler.jsonc の最後（最上位の d1_databases の次）に足す部分。
+// 確認用のD1は、本番とは別のデータベースにする（PreviewのD1は自動では分離されない）。
+{
+  "previews": {
+    "vars": {
+      "ENVIRONMENT": "preview"
+    },
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "my-app-db-staging",
+        "database_id": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  }
+}

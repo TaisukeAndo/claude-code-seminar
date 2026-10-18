@@ -1,0 +1,26 @@
+{
+  // アプリ名とデータベース名は、要件に合わせて書き換える
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "my-app",
+  "main": "src/index.js",
+  // 実行環境が対応している過去の日付にする（「今日」を入れると起動しないことがある）
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    "ENVIRONMENT": "production"
+  },
+  // 本番用のD1。database_id は、D1を作ったときの結果で置き換える
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "my-app-db",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

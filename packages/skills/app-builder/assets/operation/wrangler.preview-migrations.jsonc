@@ -1,0 +1,14 @@
+{
+  // Preview用のD1にマイグレーションを適用するための設定。
+  // database_id は wrangler.jsonc の previews.d1_databases と同じ値にそろえる
+  "name": "my-app-preview-migrations",
+  "compatibility_date": "2026-10-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "my-app-db-staging",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
