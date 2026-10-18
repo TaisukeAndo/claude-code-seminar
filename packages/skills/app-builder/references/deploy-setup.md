@@ -83,26 +83,28 @@ gh repo create <リポジトリ名> --<public|private> --source=. --remote=origi
 
 GitHub ActionsがCloudflareに接続するための認証情報。**トークンの作成と登録は、利用者自身が行う。**
 トークンの値は作成時に一度しか表示されず、AIとの会話に出すと漏れるため、MCPでは作らない。
+**AIは、【あなたにお願いします】と明示して作業を止め、[manual-steps.md](manual-steps.md) の
+B（トークンの作成）とC（GitHubへの登録）を、1ステップずつ案内する。**
 
-1. Cloudflareのダッシュボードで、APIトークンを作成する（アカウントのAPIトークン）
-   - 必要な権限（Workersスクリプトの編集、D1の編集など）は、公式ドキュメントの
-     [Roles and permissions](https://developers.cloudflare.com/workers/authorization/)
-     で確認し、**必要最小限**にする
-2. トークンは**会話に貼らない**。GitHubへの登録は、利用者が自分のターミナルで行う
+トークンの権限について（公式ドキュメントでの確認結果）:
+- Cloudflareのトークン作成画面の「Edit Cloudflare Workers」テンプレートを起点にする
+- このアプリは、公開のときに `wrangler d1 migrations apply --remote` でD1の表を作る。
+  公式ドキュメントは「D1にバインドしたWorkerをデプロイするだけなら、D1の権限は要らない」と
+  説明しているが、**D1の表を作る（書き込む）にはD1の編集権限が必要**になる。
+  テンプレートにD1の権限が含まれているかは、公式ドキュメントで確認できなかったので、
+  **「D1」の「Edit」を足す**手順にしてある（manual-steps.md のB）
+- 対象のアカウントは、公開する1つだけに絞る。権限は必要最小限にする
+- 権限の名前は変わることがある。迷ったら `docs` ツールで確認する
 
-```bash
-gh secret set CLOUDFLARE_API_TOKEN
-```
+登録後、AIは `gh secret list` で `CLOUDFLARE_API_TOKEN` の名前が並ぶことだけを確認する
+（値は表示されない）。並ぶまで、次の手順に進まない。
 
-3. アカウントID（`CLOUDFLARE_ACCOUNT_ID`）は秘密情報ではない。手順1でMCPで確認したIDを使い、
-   AIが登録してよい
+アカウントID（`CLOUDFLARE_ACCOUNT_ID`）は秘密情報ではない。手順1でMCPで確認したIDを使い、
+AIが登録してよい。
 
 ```bash
 gh secret set CLOUDFLARE_ACCOUNT_ID --body "<手順1で確認したアカウントID>"
 ```
-
-4. 登録後、`gh secret list` で2つの名前が並ぶことだけを確認する（値は表示されない）。
-   並ぶまで、次の手順に進まない
 
 ## 5. ワークフローを配置して、pushする
 
@@ -118,7 +120,7 @@ git push -u origin main
 
 ## 6. 動作を確認する
 
-1. GitHubのActionsの画面で、`Deploy` が成功していることを確認する（`gh run watch` でも見られる）
+1. GitHubのActionsの画面で、`Deploy` が成功していることを確認する（`gh run watch` でも見られる）。利用者には [manual-steps.md](manual-steps.md) のDの手順で、ブラウザでも確かめてもらう
 2. 公開されたURL（Workerのアドレス）を、パソコンとスマートフォンで開く。URLは、
    Actionsのログ、またはCloudflare MCPでWorkerの情報を読み取って確認する
 3. **MCPで確認する（読み取りのみ）**

@@ -32,13 +32,29 @@ description: >
 3. **秘密情報を会話に貼らせない。** APIトークンなどは、GitHubのSecrets設定画面か
    `gh secret set`（対話入力）で、利用者自身が登録する。値を表示・読み取り・ログ出力しない。
    `.env` や `.dev.vars` は `.gitignore` に入れる
-4. **説明は [references/plain-language-rules.md](references/plain-language-rules.md) に従う。**
-   専門用語は初出で一言説明し、作業の前後に「何をするか／何をしたか」を短く伝える
+4. **利用者は、プログラミングに詳しくない前提で説明する。** [references/plain-language-rules.md](references/plain-language-rules.md) に従い、
+   次の3つを必ず行う
+   - **進捗を見せる。** 工程が変わるとき、長い作業を始めるとき、終わったときに、
+     「いまどこか」「次は何か」「あなたにお願いすることはあるか」を知らせる
+   - **誰が何をするかを分ける。** AIが行う作業と、利用者が自分で操作する作業を、はっきり区別する
+   - **利用者の操作は、画面レベルで、1ステップずつ案内する。** どの画面のどのボタンを押すかを、
+     [references/manual-steps.md](references/manual-steps.md) の形で出し、利用者が終わるまで待つ。
+     専門用語は初出で一言説明する（言い換え表は plain-language-rules.md の4章）
 5. **Cloudflareの仕様は、書く前に公式ドキュメントで確認する。** wranglerの書式、無料枠は
    変わりやすい。利用者のプロジェクトに入っているwranglerのバージョンと `wrangler --help` も確認する。
    Cloudflare上の操作は、まずCloudflare MCPで行い、MCPで足りない部分（表の作成とデプロイは
    GitHub Actions、トークンの作成は利用者）だけ別の手段を使う。
    役割分担は [references/deploy-setup.md](references/deploy-setup.md) の冒頭の表に従う
+
+## 最初に、全体の地図を見せる
+
+作業に入る前に、利用者に次の内容を、短い言葉で伝える。
+
+- これから、4つの工程（要件定義→実装→テスト→公開）で、アプリを最後まで作ること
+- **利用者に決めてもらうこと**: 何を作るか（要件定義のやり取り）と、実施計画の承認
+- **利用者にお願いすること**: 公開の前に、CloudflareのAPIトークンを作って、GitHubに登録する操作（5〜10分ほど）。
+  手順は、そのときに1ステップずつ案内する
+- それ以外の実装・テスト・公開は、AIが続けて行うこと
 
 ## 工程0: 作業フォルダを確認する
 
@@ -48,6 +64,8 @@ description: >
 - Node.js が使えるか `node -v` で確認する（20以上）
 
 ## 工程1: 要件定義（利用者と認識をそろえる）
+
+進捗の知らせ方: 工程の初めに【進捗】を出す。質問の途中では、決まったことと、あと何を決めるかを、ときどき短くまとめる。
 
 目的: 何を作るかを決め、`requirements.md` に書き出し、実施計画とあわせて承認を得る。
 
@@ -73,6 +91,8 @@ description: >
 
 ## 工程2: 実装（作り切る）
 
+進捗の知らせ方: 工程の初めに【進捗】を出す。機能を1つ作り終えるたびに、「何ができるようになったか」を1行で知らせる。
+
 目的: `requirements.md` の「今回作る範囲」を、動く形で作り切る。
 
 1. アプリの土台がなければ [assets/template/](assets/template/) を作業フォルダにコピーして始める
@@ -88,6 +108,8 @@ description: >
 
 ## 工程3: テスト（自分のパソコンで確認）
 
+進捗の知らせ方: 工程の初めに【進捗】を出す。確認項目の何件が終わったか（例: 8件中5件）を、途中で知らせる。
+
 目的: 公開前に、想定どおり動くか確認する。localhostは自分のパソコンからしか開けないので、
 公開前に安心して試せる。
 
@@ -99,6 +121,8 @@ description: >
 
 ## 工程4: 公開（GitHub → GitHub Actions → Cloudflare）
 
+進捗の知らせ方: 手順1〜5のどれをしているかを、手順ごとに知らせる（例: 「公開の手順の3つ目（トークンの登録）です。ここは、あなたの操作が必要です」）。
+
 目的: 作ったアプリをGitHubに保存し、自動でCloudflareに公開する。
 詳しい手順と設定は [references/deploy-setup.md](references/deploy-setup.md) に従う。
 承認済みの実施計画の範囲で、次の順に進める（順番が大事。トークンの登録の前にpushしない）。
@@ -106,15 +130,19 @@ description: >
 1. **Cloudflare MCP** で、接続とアカウントを確認し、本番用のD1データベースを作り、
    `wrangler.jsonc` にIDを書く（MCPで作れないときだけ `wrangler d1 create`）
 2. GitHubにリポジトリを作る（pushはまだしない）
-3. **利用者に、APIトークンの作成とGitHubへの登録を依頼する。** 登録の完了を確認するまで待つ。
-   アカウントIDは、AIが登録してよい
+3. **利用者に、APIトークンの作成とGitHubへの登録を依頼する。** 【あなたにお願いします】と明示して、
+   作業を止める。手順は [references/manual-steps.md](references/manual-steps.md) のB（トークンの作成）と
+   C（GitHubへの登録）を、1ステップずつ出す。登録の完了は、AIが `gh secret list` で名前を確認して
+   確かめる（値は見ない）。アカウントIDは、AIが登録してよい
 4. [assets/template/.github/workflows/deploy.yml](assets/template/.github/workflows/deploy.yml) を配置し、
    mainをpushする。GitHub Actionsが、表の作成と本番へのデプロイを行う
-5. Actionsが成功したことと、本番のURLで動くことを確認する（Cloudflare MCPで、表ができているかも確認する）
+5. Actionsが成功したことと、本番のURLで動くことを確認する（Cloudflare MCPで、表ができているかも確認する）。
+   利用者にも、ブラウザとスマートフォンで開いて確かめてもらう（[manual-steps.md](references/manual-steps.md) のD）
 
 ## 作業が終わったら
 
-次を短くまとめて報告する。
+次を、プログラミングに詳しくない人にも分かる言葉で、短くまとめて報告する。
+最初に【進捗】で全工程が完了したことを示し、利用者が**画面で確かめる方法**（URLを開く、ボタンを押す）を添える。
 
 - 公開したURL（パソコンとスマートフォンの両方で開いて確認するよう伝える）
 - localhostで動かすときのアドレスと、確認した項目の一覧
