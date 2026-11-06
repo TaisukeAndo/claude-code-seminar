@@ -1,0 +1,23 @@
+# 依存パッケージの更新を、GitHub の Dependabot に任せる設定のひな形
+# 置き場所: アプリのリポジトリの .github/dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "07:00"
+      timezone: "Asia/Tokyo"
+    # 公開から7日たった版だけをPRにする（公開直後の不具合や不正な版を避ける）
+    cooldown:
+      default-days: 7
+    # メジャーバージョン（大きな変更を含む版）は自動で上げない
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    # 小さな更新は1つのPRにまとめる
+    groups:
+      minor-and-patch:
+        update-types: ["minor", "patch"]
+    open-pull-requests-limit: 5
