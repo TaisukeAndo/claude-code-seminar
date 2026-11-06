@@ -23,7 +23,7 @@ description: >
    ファイルがなければ、`app-implement` スキルの `assets/rules/expression-rules.md` を同じ場所にコピーしてよい。
    どちらも無ければ、専門用語は初めて出たときに一言で説明し、たとえ話を使わず、
    【進捗】と【あなたにお願いします】を分けて書く
-2. **点検の間は、リポジトリのファイル（コード・`.gitignore` を含む）を書き換えない。** 直すのは、報告を見た利用者が「直して」と依頼してから
+2. **点検の間は、リポジトリのファイル（コード・`.gitignore` を含む）を書き換えない。** 書いてよいのは `.security-reports/` の中だけ。 直すのは、報告を見た利用者が「直して」と依頼してから
 3. **攻撃を実際に送らない。** 本番環境・プレビュー環境に、試しの攻撃リクエストを送らない。
    確かめるのは、コードを読むことと、読み取りだけのコマンド（`git grep`、`npm audit` など）に限る
 4. **秘密の値を報告に書き写さない。** 見つけた場所（ファイル名と行番号）だけを書き、値は一部も書かない
@@ -72,9 +72,10 @@ Cloudflare 公式の `workers-best-practices` スキルが入っている場合�
 
 ### 4. 報告書を作る
 
-1. `.gitignore` に `.security-reports/` が入っているか確認する。入っていなければ、`.git/info/exclude` に
-   `.security-reports/` を1行足す（このファイルはGitHubに上がらず、リポジトリのファイルも変わらない）。
-   あわせて、「`.gitignore` にも入れておくと、他のパソコンでも安全です。次にPRを作るときに入れましょう」と利用者に伝える
+1. `.security-reports/` フォルダを作り、その中に `.gitignore` という名前で `*` の1行だけを書いたファイルを置く。
+   これで、このフォルダの中のファイルはすべてGitの対象外になる（リポジトリの `.gitignore` は書き換えない）。
+   `git status` で、報告書が変更として出てこないことを確かめる。
+   あわせて、「リポジトリの `.gitignore` にも `.security-reports/` を入れておくと、より確実です。次にPRを作るときに入れましょう」と利用者に伝える
 2. [references/report-template.md](references/report-template.md) の形で、
    `.security-reports/YYYYMMDD-security-check.md` に保存する（日付は実行した日）
 3. 利用者には、チャットで次を伝える
